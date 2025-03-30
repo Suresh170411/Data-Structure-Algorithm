@@ -5,7 +5,9 @@ public class AdvancePattern {
         // solid_rumbus(5);
         // solid_rumbus_optimized(5);
         // hollow_rumbus(5);
-        hollow_rumbus_optimized(5);
+        // hollow_rumbus_optimized(5);
+        // pyramid_with_numbers(5);
+        palindromic_pattern(5);
     }
 
     public static void butterfly_brute_force(int n){
@@ -124,6 +126,48 @@ public class AdvancePattern {
                 System.out.print("*");
             }
             System.out.print(" ".repeat(i-1));
+            System.out.println();
+        }
+    }
+
+    public static void pyramid_with_numbers(int n){
+        for (int i=1; i<=n; i++){
+
+            //spaces
+            for (int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+
+            //numbers
+            for (int j=1; j<=i; j++){
+                System.out.print(i + " ");
+            }
+
+            for (int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void palindromic_pattern (int n){
+        for (int i=1; i<=n; i++){
+           
+            //spaces
+            for (int j=1; j<=n-i; j++){
+                System.out.print(" ");
+            }
+
+            //first half numbers
+            for (int j=i; j>=1; j--){
+                System.out.print(j);
+            }
+
+            //second half numbers
+            for (int j=2; j<=i; j++){
+                System.out.print(j);
+            }
+
             System.out.println();
         }
     }
