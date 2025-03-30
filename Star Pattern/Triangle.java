@@ -1,6 +1,25 @@
 public class Triangle {
     public static void main(String[] args) {
-        pattern2_brute_force(7);
+        // pattern2_brute_force(7);
+        // pattern1_brute_force(3);
+        pattern1_otpimized(4);
+    }
+
+    // T.C --> O(n2)
+    public static void pattern1_brute_force(int levels) {
+        for (int i=1; i<=levels; i++){
+            for (int j=1; j<=i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    // T.C --> O(n)
+    public static void pattern1_otpimized(int levels) {
+        for (int i=1; i<=levels; i++){
+            System.out.println("*".repeat(i));
+        }
     }
 
     // T.C --> O(n2)
