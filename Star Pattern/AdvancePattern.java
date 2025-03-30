@@ -3,7 +3,9 @@ public class AdvancePattern {
         // butterfly_brute_force(4);
         // drawPattern(4);
         // solid_rumbus(5);
-        solid_rumbus_optimized(5);
+        // solid_rumbus_optimized(5);
+        // hollow_rumbus(5);
+        hollow_rumbus_optimized(5);
     }
 
     public static void butterfly_brute_force(int n){
@@ -85,4 +87,45 @@ public class AdvancePattern {
         String star = "*".repeat(n);
         System.out.println(space+star+space);
     }
+
+    public static void hollow_rumbus(int n){
+        for (int i=1; i<=n; i++){
+            for (int j=1; j<=n-i; j++){
+                System.out.print("   ");
+            }
+            if (i==1 || i==n){
+                for (int j=1; j<=n; j++){
+                    System.out.print(" * ");
+                }
+            }else {
+                System.out.print("*");
+                for (int j=1; j<=n-2; j++){
+                    System.out.print("   ");
+                }
+                System.out.print(" * ");
+            }
+           
+
+            for (int j=1; j<=i-1; j++){
+                System.out.print("   ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void hollow_rumbus_optimized(int n){
+        for (int i=1; i<=n; i++){
+            System.out.print(" ".repeat(n-i));
+            if (i==1 || i==n){
+                System.out.print("*".repeat(n));
+            }else{
+                System.out.print("*");
+                System.out.print(" ".repeat(n-2));
+                System.out.print("*");
+            }
+            System.out.print(" ".repeat(i-1));
+            System.out.println();
+        }
+    }
+
 }
