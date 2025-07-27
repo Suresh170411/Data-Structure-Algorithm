@@ -21,7 +21,7 @@ public class SelectionSort {
         }
         System.out.println(Arrays.toString(arr));
     }
-
+  //https://github.com/Suresh170411/Data-Structure-Algorithm.git
     private static void swap(int arr [], int i, int j){
         int temp = arr[i];
         arr[i] = arr[j];
