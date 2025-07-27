@@ -198,4 +198,6 @@ public class Triangle {
             System.out.println();
         }
     }
+	// I've added some new comments for the practice purposes
+	// Hello world!
 }
